@@ -1,7 +1,20 @@
 package main
 
-import go_fts "github.com/corrots/go-fts"
+import (
+	"fmt"
+	"github.com/corrots/gofts"
+	"log"
+)
+
+const (
+	DocFile = "/Users/dwcnmac39/Downloads/201904/enwiki-latest-abstract1.xml"
+)
 
 func main() {
-	go_fts.LoadDocuments()
+	documents, err := gofts.LoadDocuments(DocFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+	search := gofts.Search(documents, "cat")
+	fmt.Println(search)
 }

@@ -1,4 +1,4 @@
-package go_fts
+package gofts
 
 import (
 	"encoding/xml"
