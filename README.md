@@ -1,2 +1,2 @@
 # go-fts
-Golang full-text search
+Golang full-text search engine.
